@@ -1,0 +1,25 @@
+
+
+# Path and variables
+vehicle_num: "V1"
+VARIABLES : ["ENGINE RPM","DPFDP","THROTTLE","ENGINE LOAD", "SCRT","SPEED","DPFINT","IS","FUEL USE","DISTANCE","ATGMF"]
+
+# Variable Limits
+RPM_RANGE: [1250, 1800]   # RPM limit for diffrential pressure mesurment 
+THROTTLE_CUTOFF: 50 #0.5      # Mimimum throttle limit for diffrential pressure mesurment
+ENGINE_LOAD_CUTOFF: 50 #90    # Mimimum Engine load limit for diffrential pressure mesurment
+ENGINE_IDLE_SWITCH: 0     # Wheel based Vehicle Speed (binary signal same rate sampled as DP)
+REGN_INHIBT_SWITCH: 0.5     # Regenration inhibition switch (binary signal but resampling perturb values as its low sampled than DP)
+
+
+# Thresholds of variables
+Thresholds:
+  DP_Level_1: 2             # Maximum Threshold for high diffrential pressure
+  DP_Level_2: 3            # Minimum Threshold for high diffrential pressure
+  DP_Level_3: 3.5          # Maximum Threshold for low diffrential pressure
+  EXT_FLOW_RATE_TH: 325     # Maximum Eaxuast Gas Flow Rate
+  DPFINT_TEMP_HIGH_MAX: 450 #550    # Maximum Threshold for high SCR Temprature
+  DPFINT_TEMP_HIGH_MIN: 425 #500    # Minimum Threshold for high SCR Temprature
+
+  Sample_window: 25         # Sample to be consider for analyesis
+

@@ -1,0 +1,36 @@
+
+
+# Path and variables
+vehicle_num: "V1"
+VARIABLES : ["ENGINE RPM","DPFDP","THROTTLE","ENGINE LOAD", "SPEED","DPFINT","IS","ATGMF","SOOTLOAD"]
+
+# Variable Limits
+RPM_RANGE: [1200, 1920]   # RPM limit for diffrential pressure mesurment 
+THROTTLE_CUTOFF: 0       # Mimimum throttle limit for diffrential pressure mesurment
+ENGINE_LOAD_CUTOFF: 40    # Mimimum Engine load limit for diffrential pressure mesurment
+ENGINE_IDLE_SWITCH: 0     # Wheel based Vehicle Speed (binary signal same rate sampled as DP)
+REGN_INHIBT_SWITCH: 0.5   # Regenration inhibition switch (binary signal but resampling perturb values as its low sampled than DP)
+
+
+# Thresholds of variables
+Thresholds:
+  Sample_window: 25         # Sample to be consider for analyesis
+  DP_Level_1: 5             # Diffrential pressure level 1
+  DP_Level_2: 6             # Diffrential pressure level 2
+  DP_Level_3: 7       # Diffrential pressure level 3
+  DP_Level_4: 8           # Diffrential pressure level 4
+  EXT_FLOW_RATE_TH: 325     # Optimal Eaxuast Gas Flow Rate
+  DPFINT_TEMP_HIGH_MAX: 500 #550    # Maximum Threshold for high DPFIN Temprature
+  DPFINT_TEMP_HIGH_MIN: 425 #500    # Minimum Threshold for high DPFIN Temprature
+
+  #RPM_RANGE: [800, 2000] 
+  #DP_Level_1: 2             # Diffrential pressure level 1
+  #DP_Level_2: 2.66             # Diffrential pressure level 2
+  #DP_Level_3: 3.32           # Diffrential pressure level 3
+  #DP_Level_4: 4           # Diffrential pressure level 4
+
+  #RPM_RANGE: [700, 1700] 
+  #DP_Level_1: 5             # Diffrential pressure level 1
+  #DP_Level_2: 6             # Diffrential pressure level 2
+  #DP_Level_3: 7           # Diffrential pressure level 3
+  #DP_Level_4: 8           # Diffrential pressure level 4
